@@ -17,16 +17,16 @@ jobs:
 
     - name: Install dependencies
       run: |
-        cd ProjetRepotest/Flask_API
+        cd Flask_API
         pip install -r requirements.txt
 
     - name: Run Flask application
       run: |
         export FLASK_APP=app.py
         flask run --host=0.0.0.0 --port=5000 &
-      working-directory: ProjetRepotest/Flask_API
+      working-directory: Flask_API
 
     - name: Run API tests
       run: |
         pytest
-      working-directory: ProjetRepotest/Flask_API
+      working-directory: Flask_API
